@@ -20,11 +20,31 @@ if st.button('确定'):
     for i in j:
         st.write(i)
     
-else:
-    st.write('我哈哈大笑')
-st.write("词典输出功能的试用")
-cidian={"功能1":"分词器","功能2":"哈哈大笑"}
-st.write(cidian)
+from jieba import posseg
+import jieba
+#h=input("粘贴输入长文本：")
+h=open("大实验1.txt","r",encoding='utf-8').read()
+c=posseg.cut(h)
+d={}
+e={}
+for i1,i2 in c:
+    i3=i1+i2#将元组合并为字符串
+    if len(i1)==1:
+        continue
+    if i2!="v"and"vn":
+        continue
+        
+    a=d.get(i3,0)
+    d[i3]=a+1
+#print(d)
+n=list(d.items())#将词典中的键值对转换成元组构成的列表
+#print(n)
+n.sort(key=lambda x:x[1],reverse=True)#降序排列
+#print(n)
+st.write(len(n))
+for i in range(5):
+    q,w=n[i]
+    st.write("{0: <20}{1: >20}".format(q,w))
 
 with st.echo(code_location='below'):
     total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
