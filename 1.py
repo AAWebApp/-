@@ -11,7 +11,7 @@ import jieba
 这两个东西可以忽略[不要点我](https://docs.streamlit.io) ，[不要点我](https://discuss.streamlit.io).
 
 """
-xm = st.text_input('请在这里输入你的姓名 :heart:')
+xm = st.text_input('请在这里输入你的姓名 ')
 if st.button('确定'):
     if xm=="刘杨滢":
         st.write("知道吗，一个人几乎可以在任何他怀有无限热忱的事情上成功。")
@@ -23,12 +23,12 @@ if st.button('确定'):
         st.write("失败是什么？没有什么，只是更走近成功一步；成功是什么？就是走过了所有通向失败的路，只剩下一条路，那就是成功的路。")
 
 t = st.text_input('分词器', '请输入一段文字')
-if st.button('确定'):
-    import jieba
-    j=jieba.cut(t)
-    st.write("输出结果是")
-    for i in j:
-        st.write(i)
+#if st.button('确定'):
+    
+    #j=jieba.cut(t)
+    #st.write("输出结果是")
+    #for i in j:
+        #st.write(i)
 
     
 from jieba import posseg
