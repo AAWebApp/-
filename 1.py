@@ -30,7 +30,9 @@ if st.button('确定'):
     for i in j:
         st.write(i)
 """
+
 # 下面是对几篇政策的词性词频统计
+
 """
     
 from jieba import posseg
@@ -60,6 +62,7 @@ for i in range(5):
     st.write("{0: <20}{1: >20}".format(q,w))
 """
 # 下面是无关的其他代码
+
 """
 
 with st.echo(code_location='below'):
