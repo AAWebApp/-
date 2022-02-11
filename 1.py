@@ -8,12 +8,11 @@ import jieba
 """
 # 简政
 欢迎进入简政元空间！ :heart:
-以下可以忽略[documentation](https://docs.streamlit.io) ，[community
-forums](https://discuss.streamlit.io).
+这两个东西可以忽略[不要点我](https://docs.streamlit.io) ，[不要点我](https://discuss.streamlit.io).
 
 """
-st.write("""# 我的第一个网站""")
-t = st.text_input('分词器', '输入一段文字')
+
+t = st.text_input('分词器', '请输入一段文字')
 if st.button('确定'):
     import jieba
     j=jieba.cut(t)
