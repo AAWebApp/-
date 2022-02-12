@@ -7,8 +7,8 @@ import streamlit as st
 """
 # 简政
 欢迎进入简政元空间！ :heart:
-
 """
+
 xm = st.text_input('请在这里输入你真实姓名 ')
 if st.button('确定'):
     if xm=="刘杨滢":
