@@ -1,5 +1,0 @@
-streamlit
-jieba
-pandas
-altair
-collections
